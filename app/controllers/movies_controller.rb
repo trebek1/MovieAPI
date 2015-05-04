@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
 		if search 
 
 			render json: @movies = Movie.find_by_title(params[:q])
+			#@movies = Movie.where(title: search)
 		else
 			@movies = []
 		end
